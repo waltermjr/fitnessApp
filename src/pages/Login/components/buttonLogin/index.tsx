@@ -8,13 +8,14 @@ interface props extends ButtonProps {
 }
 
 const ButtonLogin = ({ children, ...rest }: props) => {
-  const { Login } = useLogin()
+  const { login, isLoggedIn } = useLogin()
   const navigate  = useNavigate()
 
   const googleLogin = async() => {
     try{
-      const userData = await Login()
-      console.log(userData)
+      const userData = await login()
+      const isLoggedInValidate = await isLoggedIn()
+      console.log(isLoggedInValidate)
       navigate('/dashboard')
     }catch(error){
       console.log(error)
