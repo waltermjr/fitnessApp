@@ -1,5 +1,5 @@
 const CracoLessPlugin = require('craco-less');
-import theme from './src/global/styles'
+import theme from './src/global/styles/theme'
 
 export default {
   plugins: [

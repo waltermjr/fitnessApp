@@ -1,10 +1,9 @@
-import Logo from "components/logo";
-import Login from "pages/Login";
+import Routes from "Routes"
 
 function App() {
   return (
     <>
-      <Login />
+      <Routes />
     </>
   );
 }
