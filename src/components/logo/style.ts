@@ -1,23 +1,25 @@
-import theme from 'global/styles/theme'
 import styled, { ThemedStyledProps } from 'styled-components'
 
 interface propsContainer {
-    size: number;
-    margin?: string
+  size: number;
+  margin?: string
 }
 
 export const Container = styled.span<propsContainer>`
-    font-size: ${({ size }) => size }px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    ${({ margin }) => margin && `
-        margin:  ${margin}
+  font-size: ${({ size }) => size }px;
+  font-family: 'Roboto', sans-serif;
+  ${({ margin }) => margin && `
+    margin:  ${margin}
     ` }
 `
 
 export const FirstLetter = styled.span`
-    color: ${({ theme }) => theme.colors.primary};
-`
+  background: -webkit-linear-gradient(${({ theme }) => theme.colors.primary},  ${({ theme }) => theme.colors.secondary});
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  `
 export const SecondLetter = styled.span`
-    color: ${({ theme }) => theme.colors.color}
+  color: ${({ theme }) => theme.colors.color};
+  font-weight: 300;
 `

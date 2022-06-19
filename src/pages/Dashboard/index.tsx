@@ -1,20 +1,15 @@
-import useLogin from "Hooks/useLogin"
-import { useEffect } from "react"
+import { PageHeader } from "antd"
 
 const Dashboard = () => {
-	const { isLoggedIn } = useLogin()
 
-	
-	useEffect(() => {
-		const verifyIsLogged = async() => {
-			const result = await isLoggedIn()
-			console.log(result)
-		};
-
-		verifyIsLogged()
-	},[])
-
-	return <h1>Dashboard</h1>
+	return(
+    <>
+      <PageHeader 
+        title="teste"
+        subTitle="teste2"
+      />
+    </>
+  )
 }
 
 export default Dashboard

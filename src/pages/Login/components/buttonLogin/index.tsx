@@ -2,6 +2,7 @@ import { Button, ButtonProps } from "antd"
 import { useNavigate } from 'react-router-dom'
 import { GoogleOutlined } from '@ant-design/icons'
 import useLogin from 'Hooks/useLogin'
+import { LoginButton } from './style'
 
 interface props extends ButtonProps {
   children: string
@@ -23,14 +24,14 @@ const ButtonLogin = ({ children, ...rest }: props) => {
   }
 
   return(
-    <Button 
+    <LoginButton 
       type="primary"
       icon={<GoogleOutlined />}
       {...rest}
       onClick={googleLogin}
     >
       {children}
-    </Button>
+    </LoginButton>
   )
 }
 
